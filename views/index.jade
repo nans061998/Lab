@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container.mt-2
+    h1 Events in San Francisco🎉
+    .mb-3
+      label.form-label Start date
+      input#start_date.form-control(type='text' placeholder='Enter the start date (YYYY-MM-DD)' value='2020-10-20')
+    .mb-3
+      label.form-label End date
+      input#end_date.form-control(type='text' placeholder='Enter the end date (YYYY-MM-DD)' value='2022-10-20')
+    .mb-3
+      label.form-label Filtration by keywords
+      input#filter.form-control(type='text' placeholder='Enter query')
+    .col-12.mb-4
+      button#find.btn.btn-primary(type='submit') Get events
+    h2#event_h2.mb-4 Found events
+    #event_list
+      #event
+  script(src='/javascripts/script.js')
